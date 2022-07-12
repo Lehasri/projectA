@@ -1,0 +1,17 @@
+// this.title=title; // this.title is global variable, and title is a local variable
+		title=filmTitle; // This is similar to  this.title=filmtitle , but using this. prefix is not compulsory
+		director=filmDirector; // This is similar to  this.director=filmDirector, but using this. prefix is not compulsory// As there are no ;local variables by name title, or director 
+		//	    so ,here they will implicitly refer to global variable
+		// Note : If title and director are not globally declare then it will be undeclared variable
+		// if the parameter names are similar to the global variables
+		// then there is an ambiguity between local variable the local variable(parameters) and global variable
+		// hence this. prefix is used for referring the global variable
+		// title=title will be referring he local variable on both side of the = operator (x=x) self assigning
+LifeCycleMethod:
+		1. init-method is post object creation
+		2. destroy-method is pre object destrubtion
+		init-method = " " this method is executed immediately after the constructor.
+			This method can be used to setup the object before it is ready for service calls
+		destroy = method is only working with singleleton.
+		destroy-method is executed before garbage collector call	
+		when an object start init-method runs then t will run destroy-method when set to null.
